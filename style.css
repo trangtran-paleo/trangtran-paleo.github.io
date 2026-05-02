@@ -34,7 +34,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(47, 74, 82, 0.96);
+  background: #ffffff;
   border-bottom: 1px solid var(--seafoam);
   backdrop-filter: blur(6px);
   display: flex;
