@@ -6,12 +6,134 @@
   <title>Projects · Trang Tran</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%234a7c7e'/><path d='M0,42 Q15,30 30,42 Q45,54 60,42 Q75,30 100,42 L100,100 L0,100 Z' fill='%231a2e3b'/><rect x='8' y='55' width='84' height='7' fill='%236b4f3a' opacity='0.8'/><rect x='8' y='67' width='84' height='5' fill='%238b7355' opacity='0.7'/><rect x='8' y='77' width='84' height='7' fill='%236b4f3a' opacity='0.6'/></svg>">
+  <style>
+    .research-intro {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--ink);
+      max-width: 800px;
+      margin-bottom: 3.5rem;
+    }
+
+    .highlights-title {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.72rem;
+      color: var(--seafoam);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1.5px solid var(--rule);
+    }
+
+    .paper-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .paper-block:first-of-type {
+      border-top: 1px solid var(--rule);
+    }
+
+    .paper-block.reverse {
+      direction: rtl;
+    }
+
+    .paper-block.reverse > * {
+      direction: ltr;
+    }
+
+    .paper-text {}
+
+    .paper-text h2 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--deep-ocean);
+      margin: 0 0 0.75rem;
+      line-height: 1.5;
+    }
+
+    .paper-text h2 a {
+      color: var(--deep-ocean);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .paper-text h2 a:hover {
+      color: var(--seafoam);
+      border-color: var(--seafoam);
+    }
+
+    .paper-text p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      animation: none;
+    }
+
+    .paper-citation {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.6;
+      border-left: 2px solid var(--rule);
+      padding-left: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .paper-citation a {
+      color: var(--seafoam);
+      text-decoration: none;
+    }
+
+    .paper-citation a:hover {
+      text-decoration: underline;
+    }
+
+    .paper-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--rule);
+    }
+
+    .paper-figure figcaption {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-top: 0.4rem;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .paper-block, .paper-block.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <a class="site-wordmark" href="index.html">
-    <span class="logo-mark">◎</span>
+    <span class="logo-mark">
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='28' height='28'>
+        <circle cx='50' cy='50' r='50' fill='#4a7c7e'/>
+        <path d='M0,42 Q15,30 30,42 Q45,54 60,42 Q75,30 100,42 L100,100 L0,100 Z' fill='#1a2e3b'/>
+        <rect x='8' y='55' width='84' height='7' fill='#6b4f3a' opacity='0.8'/>
+        <rect x='8' y='67' width='84' height='5' fill='#8b7355' opacity='0.7'/>
+        <rect x='8' y='77' width='84' height='7' fill='#6b4f3a' opacity='0.6'/>
+      </svg>
+    </span>
     <span class="wordmark-text">Trang Tran</span>
   </a>
   <nav>
@@ -25,77 +147,90 @@
 </header>
 
 <main>
-  <h1 class="page-title">Projects</h1>
-  <p class="page-subtitle">Current &amp; past research</p>
+  <h1 class="page-title">Research</h1>
   <hr class="section-rule">
 
-  <div class="project-list">
-
-    <div class="project-card">
-      <div class="project-stripe"></div>
-      <div class="project-body">
-        <div class="project-tag">Ongoing · Dissertation Chapter</div>
-        <h2>Long-Term Climate Evolution · 10 Ma to 1 Ma</h2>
-        <p>
-          My primary dissertation project investigates sea surface temperature and
-          hydroclimate changes from 10 Ma to 1 Ma — spanning the late Miocene through
-          the early Pleistocene. I combine organic geochemical records from marine
-          sediment cores with climate model outputs to characterize the
-          structure and pacing of long-term climate evolution during this interval
-          of global cooling and the onset of Northern Hemisphere glaciation.
-        </p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-stripe"></div>
-      <div class="project-body">
-        <div class="project-tag">Dissertation Chapter</div>
-        <h2>Late Pleistocene Hydroclimate Variability</h2>
-        <p>
-          I reconstruct past precipitation variability using leaf-wax hydrogen
-          isotopes (δD) from marine sediments and compare these proxy records
-          with climate model simulations. This project addresses how tropical
-          and subtropical hydroclimate responded to orbital forcing and
-          glacial–interglacial cycles during the late Pleistocene.
-        </p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-stripe"></div>
-      <div class="project-body">
-        <div class="project-tag">Dissertation Chapter</div>
-        <h2>Sea Surface Temperature Reconstructions</h2>
-        <p>
-          I use organic geochemical proxies — including TEX<sub>86</sub> and
-          U<sup>K′</sup><sub>37</sub> — to reconstruct past sea surface
-          temperature variability from marine sediment archives. A key component
-          of this work involves calibration uncertainty, diagenetic assessment,
-          and integration of multi-proxy SST estimates to improve reconstruction
-          fidelity.
-        </p>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-stripe"></div>
-      <div class="project-body">
-        <div class="project-tag">Add your project</div>
-        <h2>Your additional project title here</h2>
-        <p>
-          Describe any additional research threads — fieldwork, collaborations,
-          side projects, or undergraduate research that feeds into your broader
-          interests. Replace this placeholder with your own content.
-        </p>
-      </div>
-    </div>
-
+  <div class="research-intro">
+    <p>
+      I am a Ph.D. candidate in Geosciences at the University of Arizona. My research uses
+      organic geochemical biomarkers preserved in marine and terrestrial sediments — particularly
+      microbial lipids and fossil leaf waxes — to reconstruct past temperature and hydroclimate
+      over thousands to millions of years. I also integrate these proxy records with climate model
+      simulations to investigate the mechanisms driving past climate variability and to evaluate
+      how well models capture climate states very different from today. Understanding how the
+      climate system responded to past warm and cold extremes helps us better constrain how
+      temperatures and hydroclimate will respond to rising CO₂ in the future.
+    </p>
   </div>
+
+  <div class="highlights-title">Recent Work</div>
+
+  <!-- PAPER 1: 2025 — text left, figure right -->
+  <div class="paper-block">
+    <div class="paper-text">
+      <h2>
+        <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025PA005276" target="_blank">
+          Biomarker constraints on Indo-Pacific Warm Pool temperature during the Late Pleistocene: the role of orbital forcing
+        </a>
+      </h2>
+      <p>
+        In this paper in <em>AGU Paleoceanography and Paleoclimatology</em> we use three independent
+        proxies — TEX<sub>86</sub>, U<sup>K′</sup><sub>37</sub>, and Mg/Ca — from IODP Site U1482,
+        located off northwestern Australia at the southernmost margin of the Indo-Pacific Warm Pool,
+        to reconstruct sea surface temperatures over the past 650 kyr. Our findings demonstrate that
+        both glacial–interglacial cycles and precession govern SST and productivity variations in the
+        IPWP, with their relative importance varying spatially and across frequency bands.
+      </p>
+      <div class="paper-citation">
+        Tran, T.T., Tierney, J.E., Holbourn, A.E., Rattanasriampaipong, R. (2025).
+        Biomarker constraints on Indo-Pacific Warm Pool temperature during the Late Pleistocene:
+        the role of orbital forcing. <em>Paleoceanography and Paleoclimatology.</em>
+        <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025PA005276" target="_blank">
+          doi.org/10.1029/2025PA005276
+        </a>
+      </div>
+    </div>
+    <figure class="paper-figure">
+      <img src="Tran2025pic.jpg" alt="Tran et al. 2025 — IPWP SST reconstruction figure">
+      <figcaption>Tran et al., 2025 · Paleoceanography and Paleoclimatology</figcaption>
+    </figure>
+  </div>
+
+  <!-- PAPER 2: 2024 — figure left, text right -->
+  <div class="paper-block reverse">
+    <div class="paper-text">
+      <h2>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0277379124003949" target="_blank">
+          Biomarker reconstructions of temperature and hydroclimate variability in Vietnam during Marine Isotope Stage 3
+        </a>
+      </h2>
+      <p>
+        In this <em>Quaternary Science Reviews</em> paper we reconstruct past terrestrial
+        paleotemperatures using branched GDGTs (brGDGTs), and hydroclimate and vegetation changes
+        using leaf-wax hydrogen and carbon isotopes, during MIS 3 in the Central Highlands of
+        Vietnam. We highlight the coupled effects of obliquity and precession on South Asian climate,
+        and the importance of continental shelf exposure in modulating local temperature, rainfall
+        patterns, and vegetation cover.
+      </p>
+      <div class="paper-citation">
+        Tran, T.T., Stevens, L.R., Tierney, J.E., Vu-Van, T. (2024).
+        Biomarker reconstructions of temperature and hydroclimate variability in Vietnam during
+        Marine Isotope Stage 3. <em>Quaternary Science Reviews,</em> 341, 108893.
+        <a href="https://www.sciencedirect.com/science/article/pii/S0277379124003949" target="_blank">
+          doi.org/10.1016/j.quascirev.2024.108893
+        </a>
+      </div>
+    </div>
+    <figure class="paper-figure">
+      <img src="Tran2024pic.jpg" alt="Tran et al. 2024 — Vietnam MIS 3 reconstruction figure">
+      <figcaption>Tran et al., 2024 · Quaternary Science Reviews</figcaption>
+    </figure>
+  </div>
+
 </main>
 
 <footer>
-  &copy; 2025 Trang Tran &nbsp;·&nbsp; University of Arizona
+  &copy; 2026 Trang Tran &nbsp;·&nbsp; University of Arizona
 </footer>
 
 </body>
