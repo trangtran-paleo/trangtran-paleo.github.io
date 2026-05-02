@@ -1,0 +1,456 @@
+/* ── TRANG TRAN · ACADEMIC SITE ── */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@400;500&display=swap');
+
+:root {
+  --cream:      #f5f0e8;
+  --parchment:  #ede5d0;
+  --chalk:      #d4cbb8;
+  --rule:       #c4b99a;
+  --deep-ocean: #1a2e3b;
+  --slate:      #2d4a5a;
+  --seafoam:    #4a7c7e;
+  --sediment:   #8b7355;
+  --accent:     #6b4f3a;
+  --ink:        #1c1c1c;
+  --muted:      #5a5a5a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.75;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HEADER ── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--deep-ocean);
+  border-bottom: 2px solid var(--seafoam);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  height: 60px;
+  gap: 2rem;
+}
+
+.site-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  font-size: 1.5rem;
+  color: var(--seafoam);
+  line-height: 1;
+}
+
+.wordmark-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.95rem;
+  color: var(--cream);
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+nav {
+  display: flex;
+  gap: 0;
+}
+
+nav a {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.82rem;
+  color: var(--chalk);
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0 1.1rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+nav a:hover { color: var(--seafoam); }
+nav a.active {
+  color: var(--seafoam);
+  border-bottom-color: var(--seafoam);
+}
+
+/* ── MAIN ── */
+main {
+  flex: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  width: 100%;
+}
+
+/* ── PAGE TITLE ── */
+.page-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: var(--deep-ocean);
+  margin-bottom: 0.4rem;
+  animation: fadeUp 0.5s ease both;
+}
+
+.page-subtitle {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--seafoam);
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+
+.section-rule {
+  border: none;
+  border-top: 1.5px solid var(--rule);
+  margin-bottom: 2.5rem;
+  animation: fadeUp 0.5s 0.15s ease both;
+}
+
+/* ── PROSE ── */
+p { margin-bottom: 1.2rem; animation: fadeUp 0.5s 0.2s ease both; }
+p:last-child { margin-bottom: 0; }
+
+h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--deep-ocean);
+  margin: 2.5rem 0 0.6rem;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+/* ── ABOUT LAYOUT ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 4rem;
+  align-items: start;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+.sidebar-block {
+  background: var(--parchment);
+  border-left: 3px solid var(--seafoam);
+  padding: 1.5rem;
+}
+
+.sidebar-block h3 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.68rem;
+  color: var(--seafoam);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.sidebar-block h3:first-child { margin-top: 0; }
+
+.sidebar-block ul {
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.sidebar-block ul li {
+  padding: 0.2rem 0;
+  border-bottom: 1px solid var(--chalk);
+  font-style: italic;
+}
+
+.sidebar-block ul li:last-child { border-bottom: none; }
+
+.contact-links {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-links a {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.72rem;
+  color: var(--seafoam);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.contact-links a:hover { border-color: var(--seafoam); }
+
+/* ── PROJECT CARDS ── */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+.project-card {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 3px 1fr;
+  gap: 1.5rem;
+}
+
+.project-card:first-child { border-top: 1px solid var(--rule); }
+
+.project-stripe { background: var(--seafoam); border-radius: 2px; }
+
+.project-body {}
+.project-tag {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.65rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.project-body h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--deep-ocean);
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 0.6rem;
+}
+
+.project-body p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+  animation: none;
+}
+
+/* ── PUBLICATIONS ── */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+.pub-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 1.5rem;
+}
+
+.pub-item:first-child { border-top: 1px solid var(--rule); }
+
+.pub-year {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.72rem;
+  color: var(--seafoam);
+  padding-top: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+.pub-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--deep-ocean);
+  font-style: italic;
+  margin-bottom: 0.25rem;
+  line-height: 1.5;
+}
+
+.pub-authors {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.pub-authors strong { color: var(--accent); }
+
+.pub-journal {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.pub-links {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.pub-links a {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.65rem;
+  color: var(--seafoam);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.pub-links a:hover { border-color: var(--seafoam); }
+
+/* ── TALKS ── */
+.talk-list {
+  display: flex;
+  flex-direction: column;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+.talk-item {
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 1.5rem;
+}
+
+.talk-item:first-child { border-top: 1px solid var(--rule); }
+
+.talk-year {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.72rem;
+  color: var(--seafoam);
+  padding-top: 0.2rem;
+}
+
+.talk-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1rem;
+  color: var(--deep-ocean);
+  font-style: italic;
+  margin-bottom: 0.2rem;
+}
+
+.talk-meta {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.talk-badge {
+  display: inline-block;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.6rem;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid var(--rule);
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.talk-badge.oral { border-color: var(--seafoam); color: var(--seafoam); }
+
+/* ── TEACHING ── */
+.teaching-list {
+  display: flex;
+  flex-direction: column;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+.teaching-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 2rem;
+}
+
+.teaching-item:first-child { border-top: 1px solid var(--rule); }
+
+.teaching-meta {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.7rem;
+  color: var(--seafoam);
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+
+.teaching-role {
+  display: inline-block;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.62rem;
+  padding: 0.1rem 0.45rem;
+  background: rgba(74,124,126,0.1);
+  border: 1px solid rgba(74,124,126,0.3);
+  color: var(--seafoam);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.teaching-body h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.05rem;
+  color: var(--deep-ocean);
+  margin-bottom: 0.3rem;
+  font-weight: 400;
+}
+
+.teaching-body p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  font-style: italic;
+  margin: 0;
+  animation: none;
+}
+
+/* ── MYSELF (personal page) ── */
+.flag { font-size: 1.4rem; vertical-align: middle; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--deep-ocean);
+  color: var(--chalk);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.82rem;
+  font-style: italic;
+  opacity: 0.9;
+  border-top: 1px solid var(--slate);
+}
+
+footer a { color: var(--seafoam); text-decoration: none; }
+
+/* ── ANIMATION ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 720px) {
+  header { padding: 0 1.25rem; }
+  .wordmark-text { display: none; }
+  nav a { padding: 0 0.6rem; font-size: 0.72rem; letter-spacing: 0.06em; }
+  main { padding: 2.5rem 1.25rem 4rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .pub-item, .talk-item { grid-template-columns: 1fr; gap: 0.25rem; }
+  .teaching-item { grid-template-columns: 1fr; gap: 0.5rem; }
+}
