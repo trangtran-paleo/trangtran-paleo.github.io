@@ -5,6 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trang Tran · Paleoclimate &amp; Organic Geochemistry</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .profile-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .profile-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--rule);
+    }
+
+    .profile-name {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--deep-ocean);
+      margin: 0;
+    }
+
+    .profile-role {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .profile-icons {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+    }
+
+    .profile-icons a {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.68rem;
+      color: var(--seafoam);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+      text-transform: uppercase;
+    }
+
+    .profile-icons a:hover { border-color: var(--seafoam); }
+
+    .profile-right {}
+
+    .profile-right p {
+      margin-bottom: 1.2rem;
+    }
+
+    .profile-right blockquote {
+      font-style: italic;
+      color: var(--muted);
+      border-left: 3px solid var(--rule);
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .pub-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    .education-block {
+      margin-top: 2rem;
+      border-top: 1.5px solid var(--rule);
+      padding-top: 1.5rem;
+    }
+
+    .education-block h2 {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.68rem;
+      color: var(--seafoam);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 0.75rem;
+    }
+
+    .education-block ul {
+      list-style: none;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .education-block ul li {
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--rule);
+      font-style: italic;
+    }
+
+    .education-block ul li:last-child { border-bottom: none; }
+
+    @media (max-width: 720px) {
+      .profile-layout { grid-template-columns: 1fr; }
+      .profile-left { margin-bottom: 1rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -25,11 +139,28 @@
 
 <main>
   <h1 class="page-title">Trang Tran</h1>
-  <p class="page-subtitle">Paleoclimatology &nbsp;·&nbsp; Organic Geochemistry &nbsp</p>
+  <p class="page-subtitle">Paleoclimatology &nbsp;·&nbsp; Paleoceanography &nbsp;·&nbsp; Organic Geochemistry</p>
   <hr class="section-rule">
 
-  <div class="about-grid" style="grid-template-columns: 1fr 330px;">
-    <div class="about-text">
+  <div class="profile-layout">
+
+    <!-- LEFT: photo + name + links -->
+    <div class="profile-left">
+      <img src="mypic.jpg" alt="Trang Tran" class="profile-photo">
+      <div class="profile-name">Trang Tran</div>
+      <div class="profile-role">
+        Ph.D. Candidate in Geosciences<br>
+        University of Arizona
+      </div>
+      <div class="profile-icons">
+        <a href="https://orcid.org/0000-0002-1700-2809" target="_blank">ORCID</a>
+        <a href="https://scholar.google.com/citations?hl=en&pli=1&user=mCYR0iYAAAAJ" target="_blank">Scholar</a>
+        <a href="TrangTran_CV2026.pdf" target="_blank">CV</a>
+      </div>
+    </div>
+
+    <!-- RIGHT: bio + education -->
+    <div class="profile-right">
       <p>
         I am a Ph.D. candidate in Geosciences at the University of Arizona.
         My research interests lie in paleoclimatology, paleoceanography, and organic geochemistry.
@@ -38,30 +169,24 @@
         hydroclimate respond to elevated atmospheric CO₂ and abrupt climate
         shifts on geological timescales.
       </p>
-      <blockquote style="font-style:italic; color:var(--muted); border-left: 3px solid var(--rule); padding-left: 1rem; margin: 1.5rem 0;">
+      <blockquote>
         "The past is never past — but it is alive in our present and will define our future."
       </blockquote>
+      <p class="pub-note">
+        In academic publications, my name appears as <strong>T. Tran</strong>.
+      </p>
 
-    </div>
-
-    <div>
-      <div class="sidebar-block">
-        <h3>Education</h3>
+      <div class="education-block">
+        <h2>Education</h2>
         <ul>
-          <li>Ph.D. candidate — U. Arizona, USA</li>
+          <li>Ph.D. candidate — University of Arizona, USA</li>
           <li>M.Sc. Geological Sciences — CSU Long Beach, USA</li>
           <li>M.Sc. Climate Change — VNU-SIS, Vietnam</li>
           <li>B.Sc. Geology — VNU-HUS, Vietnam</li>
         </ul>
-
-        <h3>Links</h3>
-        <div class="contact-links">
-          <a href="https://orcid.org/0000-0002-1700-2809" target="_blank">⬡ ORCID</a>
-          <a href="https://scholar.google.com/citations?hl=en&pli=1&user=mCYR0iYAAAAJ" target="_blank">Scholar</a>
-          <a href="TrangTran_CV2026.pdf" target="_blank">Download CV (PDF)</a>
-        </div>
       </div>
     </div>
+
   </div>
 </main>
 
