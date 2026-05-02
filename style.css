@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:wght@400;500&display=swap');
 
 :root {
-  --cream:      #f5f0e8;
-  --parchment:  #ede5d0;
-  --chalk:      #d4cbb8;
-  --rule:       #c4b99a;
-  --deep-ocean: #1a2e3b;
-  --slate:      #2d4a5a;
-  --seafoam:    #4a7c7e;
-  --sediment:   #8b7355;
-  --accent:     #6b4f3a;
-  --ink:        #1c1c1c;
-  --muted:      #5a5a5a;
+  --cream:      #fbfaf7;
+  --parchment:  #f7f4ef;
+  --chalk:      #e8e1d4;
+  --rule:       #e2ddd3;
+  --deep-ocean: #2f4a52;
+  --slate:      #557078;
+  --seafoam:    #5f9ea0;
+  --sediment:   #9a8164;
+  --accent:     #7a5c44;
+  --ink:        #1a1a1a;
+  --muted:      #5f5f5f;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,8 +34,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--deep-ocean);
-  border-bottom: 2px solid var(--seafoam);
+  background: rgba(47, 74, 82, 0.96);
+  border-bottom: 1px solid var(--seafoam);
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,7 +99,9 @@ main {
   flex: 1;
   max-width: 860px;
   margin: 0 auto;
-  padding: 4rem 2rem 6rem;
+  
+  
+  padding: 5rem 2rem 7rem;
   width: 100%;
 }
 
@@ -152,7 +155,7 @@ h2 {
 
 .sidebar-block {
   background: var(--parchment);
-  border-left: 3px solid var(--seafoam);
+  border-left: 2px solid var(--seafoam);
   padding: 1.5rem;
 }
 
