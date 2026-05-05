@@ -255,15 +255,15 @@ h2 {
   animation: fadeUp 0.5s 0.2s ease both;
 }
 
-.pub-item {
+/* .pub-item {
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--rule);
   display: grid;
   grid-template-columns: 52px 1fr;
   gap: 1.5rem;
-}
+} */
 
-.pub-item:first-child { border-top: 1px solid var(--rule); }
+/* .pub-item:first-child { border-top: 1px solid var(--rule); } */
 
 .pub-year {
   font-family: 'Source Code Pro', monospace;
