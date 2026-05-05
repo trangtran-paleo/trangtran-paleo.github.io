@@ -6,19 +6,124 @@
   <title>Teaching · Trang Tran</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%234a7c7e'/><path d='M0,42 Q15,30 30,42 Q45,54 60,42 Q75,30 100,42 L100,100 L0,100 Z' fill='%231a2e3b'/><rect x='8' y='55' width='84' height='7' fill='%236b4f3a' opacity='0.8'/><rect x='8' y='67' width='84' height='5' fill='%238b7355' opacity='0.7'/><rect x='8' y='77' width='84' height='7' fill='%236b4f3a' opacity='0.6'/></svg>">
+  <style>
+    .teaching-intro {
+      font-size: 1rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 3rem;
+    }
+
+    .institution-label {
+      text-align: right;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.6rem;
+      color: var(--chalk);
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .institution-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin-bottom: 2.5rem;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .course-card {
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+
+    .course-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .course-card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .course-card-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-card-role {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.65rem;
+      color: var(--seafoam);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-card-title {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--deep-ocean);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .course-card-desc {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+      margin: 0;
+      animation: none;
+    }
+
+    .course-card-terms {
+      margin-top: 1rem;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.68rem;
+      color: var(--sediment);
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 720px) {
+      .course-grid { grid-template-columns: 1fr; }
+      .institution-label { font-size: 1.1rem; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <a class="site-wordmark" href="index.html">
-    <span class="logo-mark">◎</span>
+    <span class="logo-mark">
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' width='28' height='28'>
+        <circle cx='50' cy='50' r='50' fill='#4a7c7e'/>
+        <path d='M0,42 Q15,30 30,42 Q45,54 60,42 Q75,30 100,42 L100,100 L0,100 Z' fill='#1a2e3b'/>
+        <rect x='8' y='55' width='84' height='7' fill='#6b4f3a' opacity='0.8'/>
+        <rect x='8' y='67' width='84' height='5' fill='#8b7355' opacity='0.7'/>
+        <rect x='8' y='77' width='84' height='7' fill='#6b4f3a' opacity='0.6'/>
+      </svg>
+    </span>
     <span class="wordmark-text">Trang Tran</span>
   </a>
   <nav>
     <a href="index.html">About</a>
     <a href="projects.html">Projects</a>
     <a href="publications.html">Publications</a>
-    <a href="talks.html">Talks</a>
     <a href="teaching.html" class="active">Teaching</a>
     <a href="myself.html">Myself</a>
   </nav>
@@ -26,64 +131,45 @@
 
 <main>
   <h1 class="page-title">Teaching</h1>
-  <p class="page-subtitle">Courses, labs &amp; mentorship</p>
+  <p class="teaching-intro">Courses taught as a Teaching Assistant, 2022–2023.</p>
   <hr class="section-rule">
 
-  <p style="font-style:italic; color:var(--muted); margin-bottom:2.5rem; font-size:0.95rem; animation: fadeUp 0.5s 0.15s ease both;">
-    [Add a brief teaching philosophy statement here — 2–3 sentences about your
-    approach to inclusive, evidence-based science education.]
-  </p>
+  <div class="institution-label">California State University, Long Beach</div>
+  <hr class="institution-rule">
 
-  <div class="teaching-list">
+  <div class="course-grid">
 
-    <!-- Replace with your real teaching experience -->
-
-    <div class="teaching-item">
-      <div class="teaching-meta">
-        U. Arizona<br>
-        [Semester, Year]
-      </div>
-      <div class="teaching-body">
-        <div class="teaching-role">Teaching Assistant</div>
-        <h3>GEOS 3XX · [Course Title]</h3>
-        <p>Led weekly lab sections; describe what you taught and any materials you developed.</p>
+    <div class="course-card">
+      <img
+        class="course-card-image"
+        src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=800&q=80"
+        alt="Volcano eruption — Natural Disasters">
+      <div class="course-card-body">
+        <div class="course-card-role">Teaching Assistant</div>
+        <div class="course-card-title">GEOL 110 · Natural Disasters</div>
+        <p class="course-card-desc">
+          Laboratory analysis of geological data and field observations of geologic
+          features associated with natural disasters, including earthquakes, volcanoes,
+          landslides, and floods.
+        </p>
+        <div class="course-card-terms">Fall 2022 &nbsp;·&nbsp; Spring 2023</div>
       </div>
     </div>
 
-    <div class="teaching-item">
-      <div class="teaching-meta">
-        U. Arizona<br>
-        [Semester, Year]
-      </div>
-      <div class="teaching-body">
-        <div class="teaching-role">Teaching Assistant</div>
-        <h3>GEOS 1XX · [Introductory Course]</h3>
-        <p>Led labs and held office hours. Describe your responsibilities and any highlights.</p>
-      </div>
-    </div>
-
-    <div class="teaching-item">
-      <div class="teaching-meta">
-        U. Arizona<br>
-        [Year]
-      </div>
-      <div class="teaching-body">
-        <div class="teaching-role">Guest Lecturer</div>
-        <h3>[Course Name] · Paleoclimate Proxies</h3>
-        <p>Delivered lecture(s) on organic geochemical proxies for an upper-division course.</p>
-      </div>
-    </div>
-
-    <div class="teaching-item">
-      <div class="teaching-meta">
-        [Institution]<br>
-        [Year]
-      </div>
-      <div class="teaching-body">
-        <div class="teaching-role">Mentor</div>
-        <h3>Undergraduate Research Mentorship</h3>
-        <p>Mentored [N] undergraduate student(s) in lab techniques, data analysis,
-        and scientific writing. Add details about any projects or outcomes here.</p>
+    <div class="course-card">
+      <img
+        class="course-card-image"
+        src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&q=80"
+        alt="Ocean waves — Introduction to Oceanography">
+      <div class="course-card-body">
+        <div class="course-card-role">Teaching Assistant</div>
+        <div class="course-card-title">GEOL 160L · Introduction to Oceanography</div>
+        <p class="course-card-desc">
+          Field and laboratory study of the marine environment. Analysis of maps,
+          plus shore and on-water field trips for experience in use of oceanographic
+          instruments and interpretation of results.
+        </p>
+        <div class="course-card-terms">Spring 2023</div>
       </div>
     </div>
 
@@ -91,7 +177,7 @@
 </main>
 
 <footer>
-  &copy; 2025 Trang Tran &nbsp;·&nbsp; University of Arizona
+  &copy; 2026 Trang Tran &nbsp;·&nbsp; University of Arizona
 </footer>
 
 </body>
